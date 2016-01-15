@@ -40,10 +40,64 @@ namespace Models
 */
     class Translations
     {
-        string submissionHash;
-        DateTime datePublished;
-        string text;
-        string language;
-        string userHostAdress;
+        private string submissionHash;
+        private DateTime datePublished;
+        private string text;
+        private string language;
+        private string userHostAddress;
+
+
+        // mutators
+        public void setSubmissionHash(string x)
+        {
+            submissionHash = x;
+        }
+
+        public void setDataPublished(DateTime x)
+        {
+            datePublished = x;
+        }
+
+        public void setText(string x)
+        {
+            text = x;
+        }
+
+        public void setLanguage(string x)
+        {
+            language = x;
+        }
+
+        public void setUserHostAddress(string x)
+        {
+            userHostAddress = x;
+        }
+
+
+        //accessors
+        public string getSubmissionHash()
+        {
+            return submissionHash;
+        }
+
+        public DateTime getDatePublished()
+        {
+            return datePublished;
+        }
+
+        public string getText()
+        {
+            return text;
+        }
+
+        public string getLanguage()
+        {
+            return language;
+        }
+
+        public string getUserHostAddress()
+        {
+            return userHostAddress;
+        } 
     }
 }

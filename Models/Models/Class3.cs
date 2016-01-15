@@ -39,10 +39,76 @@ namespace Models
  */
     class Submissions
     {
-        string submissionHash;
-        DateTime datePublished;
-        string text;
-        int views;
-        string userHostAddress;
+        private string submissionHash;
+        private DateTime datePublished;
+        private string text;
+        private int views;
+        private string userHostAddress;
+
+        //mutators
+        public void setSubmissionHash(string x)
+        {
+            submissionHash = x;
+        }
+        
+        public void setDataPublished(DateTime x)
+        {
+            datePublished = x;
+        }
+
+        public void setText(string x)
+        {
+            text = x;
+        }
+
+        public void setViews(int x)
+        {
+            views = x;
+        }
+
+        public void setUserHostAddress(string x)
+        {
+            userHostAddress = x;
+        }
+
+        //accessors
+
+        public string getSubmissionHash()
+        {
+            return submissionHash;
+        }
+
+        public DateTime getDatePublished()
+        {
+            return datePublished;
+        }
+
+        public string getText()
+        {
+            return text;
+        }
+
+        public int getViews()
+        {
+            return views;
+        }
+
+        public string getUserHostAddress()
+        {
+            return userHostAddress;
+        } 
+
+
+        //methods
+        public bool incrementViews()
+        {
+            if (views >= 0){
+                views++;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     }
 }

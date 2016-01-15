@@ -36,9 +36,53 @@ namespace Models
  */
     class Translation
     {
-        string submissionHeadHash;
-        string text;
-        string language;
-        string userHostAddress;
+        private string submissionHeadHash;
+        private string text;
+        private string language;
+        private string userHostAddress;
+
+
+        //mutators
+        public void setSubmissionHeadHash(string x)
+        {
+            submissionHeadHash = x;
+        }
+
+        public void setText(string x)
+        {
+            text = x;
+        }
+
+        public void setLanguage(string x)
+        {
+            language = x;
+        }
+
+        public void setUserHostAddress(string x)
+        {
+            userHostAddress = x;
+        } 
+
+
+        //accessors
+        public string getSubmissionHeadHash()
+        {
+            return submissionHeadHash;
+        }
+
+        public string getText()
+        {
+            return text;
+        }
+
+        public string getLanguage()
+        {
+            return language;
+        }
+
+        public string getUserHostAddress()
+        {
+            return userHostAddress;
+        } 
     }
 }

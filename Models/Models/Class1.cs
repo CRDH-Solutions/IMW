@@ -45,12 +45,87 @@ namespace Models
     public class Submission
     {
         
-        DateTime datePublished;
-        string text;
-        Dictionary<string, Translation> automaticTranslations;
-        ArrayList userTranlations;
-        int views;
-        string userHostAddress;
+        private DateTime datePublished;
+        private string text;
+        private Dictionary<string, Translation> automaticTranslations;
+        private ArrayList userTranslations;
+        private int views;
+        private string userHostAddress;
+
+
+        //mutators
+        public void setDataPublished(DateTime x)
+        {
+            datePublished = x;
+        }
+
+        public void setText(string x)
+        {
+            text = x;
+        }
+
+        public void setAutomaticTranslations(Dictionary<string, Translation> x)
+        {
+            automaticTranslations = x;
+        }
+
+        public void setUserTranslations(ArrayList x)
+        {
+            userTranslations = x;
+        }
+
+        public void setViews(int x)
+        {
+            views = x;
+        }
+
+        public void setUserHostAddress(string x)
+        {
+            userHostAddress = x;
+        }
+
+
+        //accessors
+        public DateTime getDatePublished()
+        {
+            return datePublished;
+        }
+
+        public string getText()
+        {
+            return text;
+        }
+
+        public Dictionary<string, Translation> getAutomaticTranslations()
+        {
+            return automaticTranslations;
+        }
+
+        public ArrayList getUserTranslations()
+        {
+            return userTranslations;
+        }
+
+        public int getViews()
+        {
+            return views;
+        }
+
+        public string getUserHostAddress()
+        {
+            return userHostAddress;
+        } 
+
+
+        //methods
+        public bool incrementViews()
+        {
+            if (views >= 0) { 
+            views++;
+            return true;
+            } else{
+                return false;
+            }
     }
 
   
